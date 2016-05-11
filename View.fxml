@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="border" xmlns="http://javafx.com/javafx/8" onKeyPressed="#globalKeyPressed" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.Controller">
+   <center>
+      <GridPane prefHeight="150.0" prefWidth="199.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="seven" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="7" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="eight" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="nine" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="four" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="4" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button fx:id="five" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button fx:id="six" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button fx:id="one" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Button fx:id="two" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Button fx:id="three" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Button fx:id="zero" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="0" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Button fx:id="eraseButton" cancelButton="true" mnemonicParsing="false" onAction="#cancelButtonPressed" styleClass="erasebutton" text="C" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Button fx:id="resultButton" defaultButton="true" mnemonicParsing="false" onAction="#resultButtonPressed" styleClass="functionbutton" text="=" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label fx:id="ioput" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="160.0" text="" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+            <Button fx:id="divideButton" mnemonicParsing="false" onAction="#calcButtonPressed" styleClass="functionbutton" text="/" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="multiplyButton" mnemonicParsing="false" onAction="#calcButtonPressed" styleClass="functionbutton" text="*" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button fx:id="subtractButton" mnemonicParsing="false" onAction="#calcButtonPressed" styleClass="functionbutton" text="-" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#calcButtonPressed" styleClass="functionbutton" text="+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
