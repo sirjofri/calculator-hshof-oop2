@@ -1,7 +1,31 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
-.defaultbutton {
-	-fx-background-color: red;
-	-fx-background-radius: 30;
+.root {
+	button1: #ccc;
+	button2: #fff;
+	mainbackground: rgb(193,197,201);
+	displaybackground: rgb(156,185,131);
+	yellowbutton1: rgb(216,155,14);
 }
 
+.father {
+	-fx-background-color: mainbackground;
+	-fx-effect: innershadow(gaussian,black,10,0,0,0);
+}
+
+.defaultbutton,
+.functionbutton,
+.erasebutton {
+	-fx-background-color: linear-gradient(button2,button1);
+	-fx-text-alignment: center;
+	-fx-background-radius: 30;
+	-fx-effect: innershadow(gaussian,button2,0,1,0,-3);
+}
+
+.ioput {
+	-fx-background-color: displaybackground;
+	-fx-background-radius: 5;
+	-fx-effect: innershadow(gaussian,black,10,0,2,2);
+	-fx-font-family: 'DS-Digital';
+	-fx-font-size: 24;
+}

@@ -1,44 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane fx:id="border" xmlns="http://javafx.com/javafx/8" onKeyPressed="#globalKeyPressed" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.Controller">
+<BorderPane fx:id="border" styleClass="father" onKeyPressed="#globalKeyPressed" prefHeight="295.0" prefWidth="205.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.Controller">
    <center>
-      <GridPane prefHeight="150.0" prefWidth="199.0" BorderPane.alignment="CENTER">
+      <GridPane prefHeight="370.0" prefWidth="210.0" BorderPane.alignment="CENTER">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.0" minWidth="45.0" prefWidth="45.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.0" minWidth="45.0" prefWidth="45.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="65.0" prefWidth="65.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="65.0" minHeight="65.0" prefHeight="65.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="seven" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="7" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Button fx:id="eight" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Button fx:id="nine" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Button fx:id="four" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="4" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Button fx:id="five" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Button fx:id="six" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Button fx:id="one" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button fx:id="two" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button fx:id="three" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button fx:id="zero" mnemonicParsing="false" onAction="#numberButtonPressed" styleClass="defaultbutton" text="0" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Button fx:id="eraseButton" cancelButton="true" mnemonicParsing="false" onAction="#cancelButtonPressed" styleClass="erasebutton" text="C" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Button fx:id="resultButton" defaultButton="true" mnemonicParsing="false" onAction="#resultButtonPressed" styleClass="functionbutton" text="=" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Label fx:id="ioput" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="160.0" text="" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
-            <Button fx:id="divideButton" mnemonicParsing="false" onAction="#calcButtonPressed" styleClass="functionbutton" text="/" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Button fx:id="multiplyButton" mnemonicParsing="false" onAction="#calcButtonPressed" styleClass="functionbutton" text="*" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Button fx:id="subtractButton" mnemonicParsing="false" onAction="#calcButtonPressed" styleClass="functionbutton" text="-" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button fx:id="addButton" mnemonicParsing="false" onAction="#calcButtonPressed" styleClass="functionbutton" text="+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Button fx:id="seven" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#numberButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="defaultbutton" text="7" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="eight" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#numberButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="defaultbutton" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="15.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="nine" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#numberButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="defaultbutton" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="15.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="four" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#numberButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="defaultbutton" text="4" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="five" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#numberButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="defaultbutton" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="15.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="six" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#numberButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="defaultbutton" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="15.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="one" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#numberButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="defaultbutton" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="two" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#numberButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="defaultbutton" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="15.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="three" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#numberButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="defaultbutton" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="15.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="zero" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#numberButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="defaultbutton" text="0" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="30.0" left="20.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="eraseButton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="erasebutton" text="C" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="30.0" left="15.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="resultButton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#resultButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="functionbutton" text="=" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="30.0" left="15.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Label fx:id="ioput" alignment="CENTER_RIGHT" maxHeight="30.0" maxWidth="165.0" minHeight="30.0" minWidth="165.0" prefHeight="30.0" styleClass="ioput" prefWidth="165.0" text="" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" top="35.0" />
+               </GridPane.margin></Label>
+            <Button fx:id="divideButton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#calcButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="functionbutton" text="/" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="15.0" right="20.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="multiplyButton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#calcButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="functionbutton" text="*" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="15.0" right="20.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="subtractButton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#calcButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="functionbutton" text="-" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="15.0" right="20.0" top="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="addButton" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#calcButtonPressed" prefHeight="30.0" prefWidth="30.0" styleClass="functionbutton" text="+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="30.0" left="15.0" right="20.0" top="20.0" />
+               </GridPane.margin></Button>
          </children>
       </GridPane>
    </center>

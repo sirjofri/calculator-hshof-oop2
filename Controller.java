@@ -223,7 +223,8 @@ public class Controller {
 		if (clearInputField) {
 			ioput.setText(((Button) event.getSource()).getText());
 		} else {
-			ioput.setText(ioput.getText() + ((Button) event.getSource()).getText());
+			if (ioput.getText().length() < 10)
+				ioput.setText(ioput.getText() + ((Button) event.getSource()).getText());
 		}
 		clearInputField = false;
 		resultPressed = false;
