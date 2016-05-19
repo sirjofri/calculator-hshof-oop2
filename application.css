@@ -3,6 +3,10 @@
 .root {
 	button1: #ccc;
 	button2: #fff;
+	button3: blue;
+	erasebutton1: #ca0;
+	erasebutton2: #fc0;
+	erasebutton3: red;
 	mainbackground: rgb(193,197,201);
 	displaybackground: rgb(156,185,131);
 	yellowbutton1: rgb(216,155,14);
@@ -20,6 +24,21 @@
 	-fx-text-alignment: center;
 	-fx-background-radius: 30;
 	-fx-effect: innershadow(gaussian,button2,0,1,0,-3);
+	-fx-font-weight: bold;
+}
+
+.erasebutton {
+	-fx-background-color: linear-gradient(erasebutton2,erasebutton1);
+	-fx-effect: innershadow(gaussian,erasebutton2,0,1,0,-3);
+}
+
+.defaultbutton:pressed,
+.functionbutton:pressed {
+	-fx-effect: innershadow(gaussian,button3,0,1,0,-3);
+}
+
+.erasebutton:pressed {
+	-fx-effect: innershadow(gaussian,erasebutton3,0,1,0,-3);
 }
 
 .ioput {
