@@ -15,15 +15,15 @@ public class Controller {
 		ADD, SUBTRACT, MULTIPLY, DIVIDE,
 	};
 
-	private CalcAction nextAction = CalcAction.ADD; // the next action to be
+	private CalcAction nextAction = CalcAction.ADD;	// the next action to be
 													// done
-	private boolean clearInputField = false; // is the input field to be
-												// cleared?
-	private boolean resultPressed = false; // is the result button pressed
-											// immediately before?
+	private boolean clearInputField = false; 		// is the input field to be
+													// cleared?
+	private boolean resultPressed = false; 			// is the result button pressed
+													// immediately before?
 	private int value = 0;
 
-	private boolean dbg = true; // For debugging messages
+	private boolean dbg = true; 					// For debugging messages
 
 	@FXML
 	private ResourceBundle resources;
@@ -39,7 +39,7 @@ public class Controller {
 
 	@FXML
 	private Button divideButton;
-	final private String divideButtonLabel = "/"; // final because of switch!
+	final private String divideButtonLabel = "/"; // final because of switch! Look line 52: final private String addButtonLabel...
 
 	@FXML
 	private Button one;
@@ -49,7 +49,7 @@ public class Controller {
 
 	@FXML
 	private Button addButton;
-	final private String addButtonLabel = "+"; // these are the labels for the
+	final private String addButtonLabel = "+";	// these are the labels for the
 												// buttons
 	// Why I do this? At first it is a security reason for the fxml file. If
 	// someone edits it later
@@ -60,6 +60,7 @@ public class Controller {
 	// label of the button.
 	// switch() allows only constants to compare with. So I have to use them
 	// final.
+	// tested: assigning in constructor does _not_ work!
 
 	@FXML
 	private Button two;
@@ -182,7 +183,7 @@ public class Controller {
 	 *             Should never happen!
 	 */
 	private void lastAction() throws Exception {
-		int input = ioput.getText().length() == 0 ? 0 : Integer.parseInt(ioput.getText());
+		int input = ioput.getText().length() == 0 ? 0 : Integer.parseInt(ioput.getText()); // long line... I like it ;-)
 		switch (nextAction) {
 		case ADD:
 			if (!clearInputField)
@@ -231,7 +232,7 @@ public class Controller {
 	}
 
 	/**
-	 * This function is just for input via keyboard.
+	 * This function is just for input via keyboard. It maps the keypress to the specific button and fires it.
 	 * 
 	 * @param event
 	 */
@@ -330,6 +331,7 @@ public class Controller {
 		assert multiplyButton != null : "fx:id=\"multiplyButton\" was not injected: check your FXML file 'View.fxml'.";
 		assert border != null : "fx:id=\"border\" was not injected: check your FXML file 'View.fxml'.";
 
+		// Setting the Labels
 		divideButton.setText(divideButtonLabel);
 		addButton.setText(addButtonLabel);
 		subtractButton.setText(subtractButtonLabel);

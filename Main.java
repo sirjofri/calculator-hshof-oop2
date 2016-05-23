@@ -28,7 +28,7 @@ public class Main extends Application {
 	{
 		super.init();
 		
-		// @font-face didn't work...
+		// @font-face and other things didn't work...
 		Font.loadFont(Main.class.getResource("./DS-DIGI.TTF").toExternalForm(), 12);
 	}
 	
